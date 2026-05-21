@@ -1,0 +1,41 @@
+{
+  "name": "quality-life",
+  "private": true,
+  "version": "0.2.0",
+  "description": "Quality life is a free, offline-first desktop utility toolkit for tiny annoying moments.",
+  "license": "MIT",
+  "author": "Quality life contributors",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "web:build": "node scripts/build-web.mjs",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "node scripts/tauri-build.mjs",
+    "tauri:build:mac": "node scripts/tauri-build.mjs --bundles app,dmg",
+    "tauri:build:windows": "node scripts/tauri-build.mjs --bundles nsis",
+    "tauri:build:linux": "node scripts/tauri-build.mjs --bundles appimage,deb"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-clipboard-manager": "^2.0.0",
+    "@tauri-apps/plugin-global-shortcut": "^2.3.1",
+    "@tauri-apps/plugin-notification": "^2.0.0",
+    "lucide-react": "^0.468.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/node": "^22.10.2",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}

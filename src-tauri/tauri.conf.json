@@ -1,0 +1,53 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Quality life",
+  "version": "0.2.0",
+  "identifier": "app.qualitylife.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Quality life",
+        "label": "main",
+        "width": 1180,
+        "height": 760,
+        "minWidth": 960,
+        "minHeight": 640,
+        "resizable": true,
+        "center": true,
+        "decorations": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "createUpdaterArtifacts": true,
+    "targets": "all",
+    "category": "Utility",
+    "shortDescription": "Tiny tools for annoying moments.",
+    "longDescription": "Quality life is a free, offline-first desktop utility toolkit with no ads, accounts, telemetry, subscriptions, or locked tools.",
+    "publisher": "Quality life contributors",
+    "copyright": "Copyright © 2026 Quality life contributors",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico",
+      "icons/icon.png"
+    ]
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZDNkI0MTY2REQ5RTQ1RTgKUldUb1JaN2Raa0ZyL0E2YmUxWmMwK3AxK242MDIzM1cxNm5EdC9JanEzemRLeUpUSFE4d0twL3QK"
+    }
+  }
+}

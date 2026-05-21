@@ -1,0 +1,27 @@
+[package]
+name = "quality-life"
+version = "0.2.0"
+description = "Tiny tools for annoying moments."
+authors = ["Quality life contributors"]
+edition = "2021"
+license = "MIT"
+repository = ""
+
+[lib]
+name = "quality_life_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2", features = [] }
+tauri-plugin-updater = "2"
+tauri-plugin-clipboard-manager = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-global-shortcut = "2"
+enigo = "0.6"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+url = "2"
