@@ -54,7 +54,7 @@ npm run tauri:build:windows
 npm run tauri:build:linux
 ```
 
-Windows and Linux installers usually need to be built on their matching operating system or a dedicated CI runner. macOS builds create app/dmg artifacts on macOS. The Windows helper builds the NSIS installer format in this repo; MSI is not used here.
+Windows and Linux installers usually need to be built on their matching operating system or a dedicated CI runner. macOS builds create app/dmg artifacts on macOS. The Windows helper builds the NSIS installer format in this repo; MSI is not used here. The GitHub Windows workflow uses `--no-sign` so it can build a shareable installer without updater signing keys.
 
 ## Build On GitHub
 
@@ -65,12 +65,12 @@ You can build a Windows installer from GitHub Actions:
 3. Run `Build Windows Installer`.
 4. Download the `quality-life-windows-installer` artifact from the run.
 
-If you want updater-enabled bundles, add these repository secrets first:
+If you want updater-enabled signed bundles, add these repository secrets first and remove `--no-sign` from the workflow:
 
 - `TAURI_SIGNING_PRIVATE_KEY`
 - `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`
 
-If those secrets are not set, the workflow still builds the installer, but updater signing is only available when the key is present.
+The private key secret must be the full updater private key text, not the public key. If the key is encrypted, the password secret must match exactly.
 
 Build the publish-ready website bundle:
 
