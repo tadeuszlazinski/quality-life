@@ -2,6 +2,8 @@
 
 Tiny tools for annoying moments.
 
+Quality life is in very early development, expect bugs or not working tools. We apriciate some criticism to improve, especially to make ui not look so ai.
+
 Quality life is a free, offline-first desktop utility app built with Tauri, React, and TypeScript. It is designed as a lightweight local toolkit: no ads, no accounts, no telemetry, no paywalls, no subscriptions, and no locked tools.
 
 ## Windows Download First
