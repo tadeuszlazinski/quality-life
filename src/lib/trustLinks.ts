@@ -6,7 +6,10 @@ function readLink(key: string, fallback: string) {
 export const trustLinks = {
   websiteUrl: readLink("VITE_QUALITY_LIFE_WEBSITE_URL", "TODO: set your public website URL"),
   downloadUrl: readLink("VITE_QUALITY_LIFE_DOWNLOAD_URL", "TODO: set your public installer or releases URL"),
-  macDownloadUrl: readLink("VITE_QUALITY_LIFE_MAC_DOWNLOAD_URL", "TODO: set your macOS installer or releases URL"),
+  macDownloadUrl: readLink(
+    "VITE_QUALITY_LIFE_MAC_DOWNLOAD_URL",
+    "https://github.com/tadeuszlazinski/quality-life/releases/latest/download/quality-life-macos.dmg"
+  ),
   windowsDownloadUrl: readLink(
     "VITE_QUALITY_LIFE_WINDOWS_DOWNLOAD_URL",
     "https://github.com/tadeuszlazinski/quality-life/releases/latest/download/quality-life-windows-setup.exe"

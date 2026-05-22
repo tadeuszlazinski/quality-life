@@ -24,6 +24,20 @@ https://github.com/tadeuszlazinski/quality-life/releases/latest/download/quality
 
 If you are on the repo page, the Releases tab should be the easiest place to find it.
 
+## macOS Download Link
+
+If you are on a Mac, click the release asset named:
+
+```text
+quality-life-macos.dmg
+```
+
+Direct link format:
+
+```text
+https://github.com/tadeuszlazinski/quality-life/releases/latest/download/quality-life-macos.dmg
+```
+
 ## Run In Development
 
 Install dependencies:

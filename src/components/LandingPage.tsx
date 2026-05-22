@@ -140,6 +140,9 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
             <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.windowsDownloadUrl, setWebInfoOpen)}>
               Windows installer link
             </button>
+            <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.macDownloadUrl, setWebInfoOpen)}>
+              macOS installer link
+            </button>
             <button className="secondary-action fit-action" type="button" onClick={onEnterApp}>
               Open app preview
               <ArrowRight size={16} aria-hidden="true" />
@@ -213,6 +216,9 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           </button>
           <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.windowsDownloadUrl, setWebInfoOpen)}>
             Windows installer link
+          </button>
+          <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.macDownloadUrl, setWebInfoOpen)}>
+            macOS installer link
           </button>
           <button className="secondary-action fit-action small-inline-action" type="button" onClick={handleInsightDownload}>
             <Sparkles size={16} aria-hidden="true" />
