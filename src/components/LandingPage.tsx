@@ -128,10 +128,14 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
             A calm, private utility app for little computer problems. It is local-first, free forever, and built to
             work without ads, accounts, paywalls, or subscriptions.
           </p>
+          <div className="download-callout">
+            <strong>{platform === "Windows" ? "Windows download" : suggestedLabel}</strong>
+            <span>{platform === "Windows" ? "Click the Windows installer first for the fastest setup." : `Suggested for your device: ${suggestedLabel}.`}</span>
+          </div>
           <div className="action-strip compact-actions">
-            <button className="primary-action hero-download-button" type="button" onClick={handleDownload}>
+            <button className="primary-action hero-download-button" type="button" onClick={platform === "Windows" ? () => void openDownloadTarget("windows") : handleDownload}>
               <Download size={16} aria-hidden="true" />
-              Download Quality life
+              {platform === "Windows" ? "Download Windows installer" : "Download Quality life"}
             </button>
             <button className="secondary-action fit-action" type="button" onClick={onEnterApp}>
               Open app preview
@@ -197,12 +201,12 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
         <div className="section-heading">
           <span className="eyebrow">Download</span>
           <h2>Download Quality life</h2>
-          <p>Suggested for your device: {suggestedLabel}.</p>
+          <p>Suggested for your device: {suggestedLabel}. Windows users can click the installer directly.</p>
         </div>
         <div className="download-panel">
-          <button className="primary-action hero-download-button" type="button" onClick={handleDownload}>
+          <button className="primary-action hero-download-button" type="button" onClick={platform === "Windows" ? () => void openDownloadTarget("windows") : handleDownload}>
             <Download size={16} aria-hidden="true" />
-            Download Quality life
+            {platform === "Windows" ? "Download Windows installer" : "Download Quality life"}
           </button>
           <button className="secondary-action fit-action small-inline-action" type="button" onClick={handleInsightDownload}>
             <Sparkles size={16} aria-hidden="true" />

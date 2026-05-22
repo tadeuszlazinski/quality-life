@@ -1760,6 +1760,27 @@ kbd {
   gap: 12px;
 }
 
+.download-callout {
+  display: grid;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--accent-soft);
+  border-radius: 8px;
+  background: var(--panel-soft);
+}
+
+.download-callout strong {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.download-callout span {
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 .hero-download-button {
   width: min(100%, 420px);
   min-height: 56px;
