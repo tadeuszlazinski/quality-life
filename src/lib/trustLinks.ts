@@ -7,7 +7,10 @@ export const trustLinks = {
   websiteUrl: readLink("VITE_QUALITY_LIFE_WEBSITE_URL", "TODO: set your public website URL"),
   downloadUrl: readLink("VITE_QUALITY_LIFE_DOWNLOAD_URL", "TODO: set your public installer or releases URL"),
   macDownloadUrl: readLink("VITE_QUALITY_LIFE_MAC_DOWNLOAD_URL", "TODO: set your macOS installer or releases URL"),
-  windowsDownloadUrl: readLink("VITE_QUALITY_LIFE_WINDOWS_DOWNLOAD_URL", "TODO: set your Windows installer or releases URL"),
+  windowsDownloadUrl: readLink(
+    "VITE_QUALITY_LIFE_WINDOWS_DOWNLOAD_URL",
+    "https://github.com/tadeuszlazinski/quality-life/releases/latest/download/quality-life-windows-setup.exe"
+  ),
   insightDownloadUrl: readLink("VITE_QUALITY_LIFE_INSIGHT_DOWNLOAD_URL", "TODO: set your Insight app installer or releases URL"),
   repositoryUrl: readLink("VITE_QUALITY_LIFE_REPOSITORY_URL", "TODO: set your public repository URL"),
   issueUrl: readLink("VITE_QUALITY_LIFE_ISSUE_URL", "TODO: set your issue tracker URL"),
