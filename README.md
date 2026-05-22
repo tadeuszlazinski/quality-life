@@ -63,7 +63,17 @@ You can build a Windows installer from GitHub Actions:
 1. Push the repo to GitHub.
 2. Open the `Actions` tab.
 3. Run `Build Windows Installer`.
-4. Download the `quality-life-windows-installer` artifact from the run.
+4. If you triggered the workflow from a tag like `v0.2.0`, GitHub will also publish a Release with a downloadable Windows installer.
+5. If you just ran the workflow manually, download the `quality-life-windows-installer` artifact from the run.
+
+To publish a real GitHub Release, create and push a tag:
+
+```bash
+git tag v0.2.0
+git push origin v0.2.0
+```
+
+That tag pushes the release workflow and uploads the installer to the GitHub Releases page as `quality-life-windows-setup.exe`.
 
 If you want updater-enabled signed bundles, add these repository secrets first and remove `--no-sign` from the workflow:
 
