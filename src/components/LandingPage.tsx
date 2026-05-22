@@ -137,6 +137,9 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
               <Download size={16} aria-hidden="true" />
               {platform === "Windows" ? "Download Windows installer" : "Download Quality life"}
             </button>
+            <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.windowsDownloadUrl, setWebInfoOpen)}>
+              Windows installer link
+            </button>
             <button className="secondary-action fit-action" type="button" onClick={onEnterApp}>
               Open app preview
               <ArrowRight size={16} aria-hidden="true" />
@@ -207,6 +210,9 @@ export function LandingPage({ onEnterApp }: LandingPageProps) {
           <button className="primary-action hero-download-button" type="button" onClick={platform === "Windows" ? () => void openDownloadTarget("windows") : handleDownload}>
             <Download size={16} aria-hidden="true" />
             {platform === "Windows" ? "Download Windows installer" : "Download Quality life"}
+          </button>
+          <button className="secondary-action fit-action small-inline-action" type="button" onClick={() => void openExternalTargetOrInfo(trustLinks.windowsDownloadUrl, setWebInfoOpen)}>
+            Windows installer link
           </button>
           <button className="secondary-action fit-action small-inline-action" type="button" onClick={handleInsightDownload}>
             <Sparkles size={16} aria-hidden="true" />

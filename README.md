@@ -14,6 +14,14 @@ quality-life-windows-setup.exe
 
 That is the installer your friend should open. It is the first thing to look for on the Releases page.
 
+Direct link format:
+
+```text
+https://github.com/YOUR-USERNAME/quality-life/releases/latest/download/quality-life-windows-setup.exe
+```
+
+If you are on the repo page, the Releases tab should be the easiest place to find it.
+
 ## Run In Development
 
 Install dependencies:
